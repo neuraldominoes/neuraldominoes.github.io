@@ -22,6 +22,7 @@ url     : "https://neuraldominoes.github.io" # the base hostname & protocol for 
 baseurl : "" # does not include hostname
 title   : "neural dominoes"
 description:  "Stuff I'm learning ig :)" # this means to ignore newlines until "Language & timezone"
+skin: dark
   
 
 
