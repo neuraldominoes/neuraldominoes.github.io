@@ -180,16 +180,17 @@ analytics:
 
 ## => Build
 ##############################
-markdown    : kramdown
-highlighter : rouge
-permalink   : date
+markdown: kramdown
+highlighter: rouge
+permalink: date
 
 kramdown:
   math_engine: katex
   syntax_highlighter: rouge
+  input: GFM # Add this line for better Markdown parsing
 
-katex: true  # Enable KaTeX support
-math: true   # Global math support (can be overridden per post)
+katex: true
+math: true
 
 
 exclude:
