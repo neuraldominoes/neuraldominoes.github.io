@@ -21,7 +21,7 @@ highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "t
 url     : "https://neuraldominoes.github.io" # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl : "" # does not include hostname
 title   : "neural dominoes"
-description: > "stuff I'm learning ig:)" # this means to ignore newlines until "Language & timezone"
+description:  "stuff I'm learning ig:)" # this means to ignore newlines until "Language & timezone"
   
 
 
