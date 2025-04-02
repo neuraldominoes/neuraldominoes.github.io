@@ -1,8 +1,9 @@
 ---
 title: Separator theorems in graph theory
 math: true
-tags: [TeXt, graph-theory]
+tags: [graph-theory]
 ---
+Please ignore this post while I correct this crazy markdown issue. :( stay tuned, ig.
 
 # Tree Separator Theorem
 
