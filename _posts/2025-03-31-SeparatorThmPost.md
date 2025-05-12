@@ -2,9 +2,10 @@
 title: Separator theorems in graph theory
 math: true
 tags: [graph-theory]
+katex: true
 ---
 Please ignore this post while I correct this crazy markdown issue. :( stay tuned, ig.
-
+{% raw %}
 # Tree Separator Theorem
 
 > Here is a random question. (I'm going to pretend that this totally isn't just a way for me to focus on learning stuff for solving my assignment and stop myself from doodling) Actually, let's state multiple different questions involving the same concept:
@@ -105,3 +106,6 @@ Alternatively, we can run through the method directly:
      - Take the neighbor $$ v_1 $$ of $$ v $$ inside $$ T_1 $$.  
      - Remove $$ v_1 $$ and check the new components.  
      - Eventually, we find a split where both parts have $$ \leq \frac{2n}{3} $$ vertices.
+    
+       
+{% endraw %}
