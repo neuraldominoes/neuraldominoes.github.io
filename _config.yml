@@ -53,6 +53,15 @@ author:
   github    : # "user_name" the last part of your profile url, e.g. https://github.com/user_name
   npm       : # "user_name" the last part of your profile url, e.g. https://www.npmjs.com/~user_name
 
+## => TeXt Theme Configuration
+##############################
+text_theme:
+  math:
+    engine: katex       # or mathjax
+    katex:
+      version: "0.16.8"
+      copy_tex: true
+
 
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
@@ -185,14 +194,8 @@ highlighter: rouge
 permalink: date
 
 kramdown:
-  math_engine: katex
+  input: GFM
   syntax_highlighter: rouge
-  input: GFM # Add this line for better Markdown parsing
-  math_engine_opts: { strict: false }
-
-katex: true 
-math: true
-
 
 exclude:
   - CHANGELOG.md
