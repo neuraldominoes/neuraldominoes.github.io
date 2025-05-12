@@ -1,8 +1,10 @@
 ---
 title: Separator theorems in graph theory
 math: true
+mathjax: false         # Explicitly disable MathJax if using KaTeX
+katex: true            # Explicitly enable KaTeX
 tags: [graph-theory]
-katex: true
+
 ---
 Please ignore this post while I correct this crazy markdown issue. :( stay tuned, ig.
 {% raw %}
