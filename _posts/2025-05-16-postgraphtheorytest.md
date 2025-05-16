@@ -25,9 +25,8 @@ We say $S$ *separates* $H$ in $G$ if there is no edge between any of $V(H)$ and 
 1. **Given:**
    - A real number $\alpha > \frac{1}{2}$.
    - A tree $T$ with at least $\alpha + 1$ vertices.  
-   **Then:**  
-   There exists a vertex $v$ in $T$ whose removal will disconnect $T$ into a forest (a collection of smaller trees), where one of the resulting components $F$ satisfies:
-$$ \alpha \leq |V(F)| < 2\alpha $$
+   - **Then:**
+     There exists a vertex $v$ in $T$ whose removal will disconnect $T$ into a forest (a collection of smaller trees), where one of the resulting components $F$ satisfies: $\alpha \leq |V(F)| < 2\alpha$
 
    **Note:** $\alpha$ is just a parameter used to set the size bound. No matter what $\alpha > \frac{1}{2}$ you choose, as long as the tree has at least $\alpha + 1$ vertices, you can find such a separator vertex $v$.
 
@@ -41,9 +40,13 @@ $$ \alpha \leq |V(F)| < 2\alpha $$
 We basically construct a separator vertex by iteratively refining our choice of the separator vertex till we get what we want. 
 
 1. **Base Case:**  
-   If $\alpha \leq 1$, we are done. If we just remove a leaf from the tree, we get a single vertex as one component, which satisfies the inequality:
-$$ \alpha \leq |V(F)| < 2\alpha $$
-   let's also knock the reason for having$|V(T)| \geq \alpha + 1$ as a constraint out of the way. 
+  - If $\alpha \leq 1$, we are done. If we just remove a leaf from the tree, we get a single vertex as one component, which satisfies the inequality:
+
+$$
+\alpha \leq |V(F)| < 2\alpha
+$$
+   
+   - let's also knock the reason for having $|V(T)| \geq \alpha + 1$ as a constraint out of the way. 
    - In a tree with fewer than $\alpha + 1$ vertices, removing any vertex leaves components of size at most $\alpha$, so the theorem holds trivially.
 
 Now onto the more juicy stuff since we've got that out of the way. 
@@ -58,8 +61,12 @@ Now onto the more juicy stuff since we've got that out of the way.
    > note to self insert that one pic of magnolias or wtv btw 
 
    - **Case 1:** If all $T_i$ happen to be such that $|V(T_i)| \leq \alpha$, then we can take a union of some of them to form $F$ such that:
-$$ \alpha \leq |V(F)| < 2\alpha $$
-     This is definitely also possible because $|V(T)| > \alpha + 1$.  
+     
+$$
+\alpha \leq |V(F)| < 2\alpha
+$$
+ 
+   This is definitely also possible because $|V(T)| > \alpha + 1$.  
 
    - **Case 2:** If some $T_1$ has $|V(T_1)| > \alpha$:  
      - If $|V(T_1)| < 2\alpha$, then $F = T_1$ satisfies the theorem, and we are done.  
@@ -77,7 +84,7 @@ $$ \alpha \leq |V(F)| < 2\alpha $$
 ## Application to one of the original questions
 
 Consider the problem:  
-*"Any $n$-vertex tree can be divided into two parts (subgraphs that can be forests), each with no more than $\frac{2n}{3}$ vertices, by removing a single vertex."*
+"Any $n$-vertex tree can be divided into two parts (subgraphs that can be forests), each with no more than $\frac{2n}{3}$ vertices, by removing a single vertex."
 
 We can solve this using the theorem:  
 - Set $\alpha = \frac{n}{3}$.  
