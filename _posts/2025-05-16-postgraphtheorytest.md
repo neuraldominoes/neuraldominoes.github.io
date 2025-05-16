@@ -32,7 +32,7 @@ We say $S$ *separates* $H$ in $G$ if there is no edge between any of $V(H)$ and 
 
    We choose $\alpha = \frac{1}{2}$ so that $2\alpha = 2 \times \frac{1}{2} = 1$.  
    If $\alpha \leq \frac{1}{2}$, the theorem could become trivial or impossible to satisfy. For example:  
-    - If $\alpha = 0.4$, then $2\alpha = 0.8$, and the only integer satisfying $0.4 \leq |V(F)| < 0.8$ is $|V(F)| = 0$, which is not useful (a component with $0$ vertices doesn't make sense).  
+    - If $\alpha = 0.4$, then $2\alpha = 0.8$, and the only integer satisfying $0.4 \leq \|V(F)\| < 0.8$ is $\|V(F)\| = 0$, which is not useful (a component with $0$ vertices doesn't make sense).  
     - With $\alpha > \frac{1}{2}$, the interval $[\alpha, 2\alpha)$ will always contain at least one integer (specifically, $1$), making the theorem non-trivial.
 
 ## Proof
@@ -46,7 +46,7 @@ $$
 \alpha \leq |V(F)| < 2\alpha
 $$
    
-   - let's also knock the reason for having $|V(T)| \geq \alpha + 1$ as a constraint out of the way. 
+   - let's also knock the reason for having $\|V(T)\| \geq \alpha + 1$ as a constraint out of the way. 
    - In a tree with fewer than $\alpha + 1$ vertices, removing any vertex leaves components of size at most $\alpha$, so the theorem holds trivially.
 
 Now onto the more juicy stuff since we've got that out of the way. 
