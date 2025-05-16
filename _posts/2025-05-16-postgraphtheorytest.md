@@ -26,7 +26,7 @@ We say $S$ *separates* $H$ in $G$ if there is no edge between any of $V(H)$ and 
    - A real number $\alpha > \frac{1}{2}$.
    - A tree $T$ with at least $\alpha + 1$ vertices.  
    - **Then:**
-     There exists a vertex $v$ in $T$ whose removal will disconnect $T$ into a forest (a collection of smaller trees), where one of the resulting components $F$ satisfies: $\alpha \leq |V(F)| < 2\alpha$
+     There exists a vertex $v$ in $T$ whose removal will disconnect $T$ into a forest (a collection of smaller trees), where one of the resulting components $F$ satisfies: $\alpha \leq \|V(F)\| < 2\alpha$
 
    **Note:** $\alpha$ is just a parameter used to set the size bound. No matter what $\alpha > \frac{1}{2}$ you choose, as long as the tree has at least $\alpha + 1$ vertices, you can find such a separator vertex $v$.
 
@@ -60,17 +60,17 @@ Now onto the more juicy stuff since we've got that out of the way.
    > *(We now get a bunch of components as the graph falls apart into a bunch of components in our hands. (im being dramatic af here, but think of it as just removing a node in a mutistemmed flower and the different pieces falling apart in your hand.))*  
    > note to self insert that one pic of magnolias or wtv btw 
 
-   - **Case 1:** If all $T_i$ happen to be such that $|V(T_i)| \leq \alpha$, then we can take a union of some of them to form $F$ such that:
+   - **Case 1:** If all $T_i$ happen to be such that $\|V(T_i)\| \leq \alpha$, then we can take a union of some of them to form $F$ such that:
      
 $$
 \alpha \leq |V(F)| < 2\alpha
 $$
  
-   This is definitely also possible because $|V(T)| > \alpha + 1$.  
+   This is definitely also possible because $\|V(T)\| > \alpha + 1$.  
 
-   - **Case 2:** If some $T_1$ has $|V(T_1)| > \alpha$:  
-     - If $|V(T_1)| < 2\alpha$, then $F = T_1$ satisfies the theorem, and we are done.  
-     - If $|V(T_1)| \geq 2\alpha$, we **recurse** on $T_1$ ​ in a similar manner to what we've done thus far:  
+   - **Case 2:** If some $T_1$ has $\|V(T_1)\| > \alpha$:  
+     - If $\|V(T_1)\| < 2\alpha$, then $F = T_1$ satisfies the theorem, and we are done.  
+     - If $\|V(T_1)\| \geq 2\alpha$, we **recurse** on $T_1$ ​ in a similar manner to what we've done thus far:  
        - Let $v_2$ be the neighbor of $v_1$ inside $T_1$.  
        - Remove $v_2$ and consider the components $S_1$ not containing $v_1$.  
        - The total vertices in $S_1$ must be at least $2\alpha - 1$ (since $T_1$ originally had $\geq 2\alpha$ vertices).  
@@ -89,7 +89,7 @@ Consider the problem:
 We can solve this using the theorem:  
 - Set $\alpha = \frac{n}{3}$.  
 - Since $\alpha > \frac{1}{2}$ for $n \geq 2$, the theorem applies.  
-- The tree $T$ has $|V(T)| = n \geq \alpha + 1 = \frac{n}{3} + 1$, which holds for $n \geq 2$.  
+- The tree $T$ has $\|V(T)\| = n \geq \alpha + 1 = \frac{n}{3} + 1$, which holds for $n \geq 2$.  
 
 Alternatively, we can run through the method directly:  
 1. Start with a leaf and its neighbor $v$.  
