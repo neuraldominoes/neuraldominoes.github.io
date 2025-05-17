@@ -12,7 +12,18 @@
 {%- include snippets/get-nav-url.html path=_paths_rss -%}
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ __return }}">
 
-{%- include head/favicon.html -%}
+<!-- Favicon Configuration -->
+<link rel="icon" href="{{ '/assets/images/Untitled_Artwork.ico' | relative_url }}">
+
+<!-- Modern browsers (PNG versions) -->
+<link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/Untitled_Artwork-32x32.png' | relative_url }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/images/Untitled_Artwork-16x16.png' | relative_url }}">
+
+<!-- Apple iOS -->
+<link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/Untitled_Artwork-180x180.png' | relative_url }}">
+
+<!-- Android/WebApp -->
+<link rel="manifest" href="{{ '/assets/images/site.webmanifest' | relative_url }}">
 
 {%- include snippets/prepend-baseurl.html path='/assets/css/main.css' -%}
 <link rel="stylesheet" href="{{ __return }}">
@@ -36,5 +47,7 @@
           throwOnError: false
         });"></script>
 {% endif %}
+
+
 
 {%- include head/custom.html -%}
