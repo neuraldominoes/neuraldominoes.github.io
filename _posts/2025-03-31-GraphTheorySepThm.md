@@ -2,6 +2,7 @@
 title: "Tree Separator Theorem"
 date: 2025-03-31
 math: true  
+tags: [graph-theory]
 ---
 
 # Tree Separator Theorem
